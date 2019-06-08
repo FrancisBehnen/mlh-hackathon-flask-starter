@@ -9,10 +9,6 @@ blueprint = Blueprint('home', __name__)
 
 @blueprint.route('/')
 def index():
-    return render_template('home/index.html')
-
-@blueprint.route('/home')
-def home():
     email = request.args.get('email', '')
 
     if email:
@@ -20,4 +16,4 @@ def home():
         print("Someone signed up!", file=sys.stderr)
         flash('Thank you for signing up with: ' + e.email, 'info')
 
-    return render_template('home/home.html')
+    return render_template('home/index.html')
