@@ -13,8 +13,8 @@ class Signee(db.Model):
     def signUp(email):
         instance = Signee(email)
 
-        db.session.add(instance)
-        db.session.commit()
+        # db.session.add(instance)
+        # db.session.commit()
 
         return instance
 
